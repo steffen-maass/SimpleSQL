@@ -4,7 +4,7 @@ Setup Project
 Notice: We used exclusively IntelliJ IDEA to develop and build this application, this platform supports all the needed
 features to build the project using Gradle, the same may not apply to other development environments!
 
-1. Install Gradle 1.8 (http://www.gradle.org) - this step can be skipped when using IntelliJ, Gradle is bundled in there.
+1. Install Gradle (http://www.gradle.org)
 	1. extract to arbitrary directory
 	2. add `bin` to your `PATH`(for Windows...)
 2. Clone repository to directory of choice
