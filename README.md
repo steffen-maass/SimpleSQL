@@ -17,3 +17,11 @@ Run Project
 =======
 
 Run main in SimpleSQLMain-class, the command-line will open and you can start typing...
+
+Todo
+=======
+* Implement a Storage Manager and a Query execution
+* Implement missing parts of Data Manipulation Language (`INSERT/UPDATE/DELETE`)
+* Implement interface for Data Definition Language
+* Implement a proper type system for database catalog
+* Implement actual cost-based optimization, this is currently just a brute-force-approach
