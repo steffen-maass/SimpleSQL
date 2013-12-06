@@ -1,0 +1,3 @@
+#CourseID:String:PRIMARY, CourseName:String, Department:String, ProfessorID:Int
+# size of relation, # of distinct values of each attribute
+1200, 1200, 1200, 28, 1066

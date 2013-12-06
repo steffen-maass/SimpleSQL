@@ -1,0 +1,20 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+src/generated/**
+
+# IDEA #
+.idea
+*.iws
+*.iml
+
+# Gradle #
+.gradle
+gradle
+build
+classes
+gradlew*

@@ -1,0 +1,2 @@
+#CourseID:String:PRIMARY, StudentID:String:PRIMARY, Grade:Int
+45295, 1200, 9748, 100

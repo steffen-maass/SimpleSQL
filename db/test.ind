@@ -1,0 +1,15 @@
+#list of relations
+Course, Professor, Student, Grade
+
+#start of relation declaration
+#first one
+ID:String:PRIMARY, CourseName:String, Department:String, ProfessorID:Int
+
+#second one Professor
+ID:Int:PRIMARY, Name:String, Department:String
+
+#student
+ID:String:PRIMARY, Name:String, Age:Int, GraduationYear:Int
+
+#Grade
+CourseID:String:PRIMARY, StudentID:String:PRIMARY, Grade:Int

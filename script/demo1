@@ -1,0 +1,9 @@
+set database test
+set showAllTrees false
+set heuristics true
+set showVisualTrees true
+set showCostsInVisualTrees true
+set showVisualFirstTree true
+set showVisualBestTree false
+set showVisualWorstTree false
+load test/Query2.sql

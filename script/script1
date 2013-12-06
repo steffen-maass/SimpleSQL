@@ -1,0 +1,7 @@
+set database test
+set showVisualTrees true
+set showVisualFirstTree true
+set showVisualBestTree true
+set showVisualWorstTree true
+set showCostsInVisualTrees true
+load test/University1.sql

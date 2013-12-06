@@ -1,0 +1,3 @@
+#ID:String:PRIMARY, Name:String, Grade:Int
+# size of relation, # of distinct values of each attribute
+20, 5, 8, 3

@@ -1,0 +1,51 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.7
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    antlr4
+}
+
+dependencies {
+    compile group: 'org.abego.treelayout', name: 'org.abego.treelayout.core', version: '1.0.1'
+    compile group: 'com.google.guava', name: 'guava', version: '12.0'
+    compile "org.antlr:antlr4-runtime:4.1"
+    antlr4 "org.antlr:antlr4:4.1"
+}
+
+def destinationDir = "src/generated/java/SimpleSQL"
+def antlrSource = 'src/main/antlr'
+
+sourceSets.main.java.srcDir "src/generated/java"
+sourceSets.main.java.srcDir "src/main/java"
+
+task antlrOutputDir << {
+    mkdir(destinationDir)
+}
+
+task generateGrammarSource(dependsOn: antlrOutputDir, type: JavaExec) {
+    description = 'Generates Java sources from Antlr4 grammars.'
+
+    inputs.dir file(antlrSource)
+    outputs.dir file(destinationDir)
+
+    def grammars = fileTree(antlrSource).include('**/*.g4')
+
+    main = 'org.antlr.v4.Tool'
+    classpath = configurations.antlr4
+    args = ["-o", "${destinationDir}", grammars.files].flatten()
+}
+
+task grun(type: JavaExec, dependsOn: generateGrammarSource) {
+    classpath configurations.antlr4
+    classpath sourceSets.main.output
+    main = 'org.antlr.v4.runtime.misc.TestRig'
+    args = ["SimpleSQL.SimpleSQL", "statement", "-gui", "-tree", "-trace", "-diagnostics", "test/SQLTest4.sql"].flatten()
+}
+
+compileJava.dependsOn(generateGrammarSource)

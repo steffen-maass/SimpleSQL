@@ -1,0 +1,9 @@
+#list of relations
+TableA, TableB
+
+#start of relation declaration
+#first one
+ID:String:PRIMARY, Name:String, Grade:Int
+#second one
+ID:String, Name:String, Grade:Int   
+
